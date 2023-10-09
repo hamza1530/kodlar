@@ -1,0 +1,254 @@
+using System;
+
+using System.Linq;
+using System.Threading;
+using System.Collections.Generic;
+
+namespace Mat_best;
+
+public static class Program
+{
+   public static void Main()
+   {
+		 int i = 10;
+	 	int puan = 0;
+	 	int seviye = 1;
+   	while (true)
+	   {
+			Console.Clear();
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			int sayi1 = new Random().Next(1, 30);
+			int sayi2 = new Random().Next(1, 30);
+			int dogruCevap = sayi1 + sayi2;
+			Console.WriteLine(sayi1 + " + " + sayi2 + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			string kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 14)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			// Çarpma sorusu
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			sayi1 = new Random().Next(1, 10);
+			sayi2 = new Random().Next(1, 10);
+			dogruCevap = sayi1 * sayi2;
+			Console.WriteLine(sayi1 + " * " + sayi2 + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 10)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			// karekok sayisi calismasi
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			List<int> sayilar = new List<int>();
+			sayilar.Add(1);
+			sayilar.Add(4);
+			sayilar.Add(9);
+			sayilar.Add(16);
+			sayilar.Add(25);
+			sayilar.Add(36);
+			sayilar.Add(49);
+			sayilar.Add(64);
+			sayilar.Add(81);
+			sayilar.Add(100);
+			sayi1 = new Random().Next(0, 10);
+			dogruCevap = sayilar[sayi1] / sayilar[sayi1] * sayi1 + 1;
+			Console.WriteLine(sayilar[sayi1] + " karakökü " + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap! Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 14)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			// çıkarma sorusu
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			sayi1 = new Random().Next(11, 20);
+			sayi2 = new Random().Next(1, 10);
+			dogruCevap = sayi1 - sayi2;
+			Console.WriteLine(sayi1 + " - " + sayi2 + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 14)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			// kareli sayılar				           
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			List<int> KareliSayi = new List<int>();
+			KareliSayi.Add(0);
+			KareliSayi.Add(1);
+			KareliSayi.Add(4);
+			KareliSayi.Add(9);
+			KareliSayi.Add(16);
+			KareliSayi.Add(25);
+			KareliSayi.Add(36);
+			KareliSayi.Add(49);
+			KareliSayi.Add(64);
+			KareliSayi.Add(81);
+			KareliSayi.Add(100);
+			sayi1 = new Random().Next(0, 10);
+			if (sayi1 == 0)
+			{
+				sayi1++;
+			}
+			dogruCevap = sayi1 * sayi1;
+			Console.WriteLine(sayi1 + " karesi" + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap! Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 14)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			// küplü sayılar
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			List<int> küplüSayi = new List<int>();
+			küplüSayi.Add(1); //1
+			küplüSayi.Add(8); //2
+			küplüSayi.Add(27);//3
+			küplüSayi.Add(64);//4
+			küplüSayi.Add(125);//5
+			küplüSayi.Add(216);//6
+			küplüSayi.Add(343);//7
+			sayi1 = new Random().Next(1, 8);
+			dogruCevap = sayi1 * sayi1 * sayi1;
+			Console.WriteLine(sayi1 + " küpü" + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap! Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 14)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			sayi1 = new Random().Next(0, 7); // alttaki sayi
+	    	sayi2 = new Random().Next(0, 5); // üstteki sayı	    	
+			Console.WriteLine(sayi1 + " üstü " + sayi2 + " = ");
+			Console.WriteLine(i + " saniyen var !");
+			int sayi3 = new Random().Next(0, 10);
+			if (sayi1 == 0 & sayi2 == 0)
+			{
+				Console.WriteLine("cevap belirsiz devam etmek icin " + sayi3 + " yaz");
+				dogruCevap = sayi3;				
+			}
+			kullaniciCevabı = Console.ReadLine();									
+			if (sayi2 == 1)
+			{
+				dogruCevap = sayi1;
+			}
+			if (sayi2 == 2)
+			{
+				dogruCevap = sayi1 * sayi1;
+			}
+			if (sayi2 == 3)
+			{
+				dogruCevap = sayi1 * sayi1 * sayi1;
+			}
+			if (sayi2 == 4)
+			{
+				dogruCevap = sayi1 * sayi1 * sayi1 * sayi1;
+			}						
+			if (kullaniciCevabı == dogruCevap.ToString())
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+			}
+			if (sayi2 == 0)
+			{
+				dogruCevap = 1;
+			}
+			if (kullaniciCevabı != dogruCevap)
+			{
+				Console.WriteLine("Yanlış cevap! Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 14)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}	  	 		
+	   }		
+   }
+}
