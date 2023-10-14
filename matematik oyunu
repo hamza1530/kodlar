@@ -1,16 +1,15 @@
 using System;
-
 using System.Linq;
-using System.Threading;
 using System.Collections.Generic;
+using System.Threading;
 
-namespace Mat_best;
+namespace Mat_oyunu_best_version;
 
 public static class Program
 {
-   public static void Main()
-   {
-		 int i = 10;
+   public static void Main()		
+   {		   
+	 	int i = 10;
 	 	int puan = 0;
 	 	int seviye = 1;
    	while (true)
@@ -18,8 +17,8 @@ public static class Program
 			Console.Clear();
 			Console.WriteLine("Seviye: " + seviye);
 			Console.WriteLine("Puanınız: " + puan);
-			int sayi1 = new Random().Next(1, 30);
-			int sayi2 = new Random().Next(1, 30);
+			int sayi1 = new Random().Next(1, 50);
+			int sayi2 = new Random().Next(1, 50);
 			int dogruCevap = sayi1 + sayi2;
 			Console.WriteLine(sayi1 + " + " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var !");
@@ -43,8 +42,8 @@ public static class Program
 			// Çarpma sorusu
 			Console.WriteLine("Seviye: " + seviye);
 			Console.WriteLine("Puanınız: " + puan);
-			sayi1 = new Random().Next(1, 10);
-			sayi2 = new Random().Next(1, 10);
+			sayi1 = new Random().Next(1, 15);
+			sayi2 = new Random().Next(1, 15);
 			dogruCevap = sayi1 * sayi2;
 			Console.WriteLine(sayi1 + " * " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var !");
@@ -80,9 +79,9 @@ public static class Program
 			sayilar.Add(64);
 			sayilar.Add(81);
 			sayilar.Add(100);
-			sayi1 = new Random().Next(0, 10);
+			sayi1 = new Random().Next(0, 9);
 			dogruCevap = sayilar[sayi1] / sayilar[sayi1] * sayi1 + 1;
-			Console.WriteLine(sayilar[sayi1] + " karakökü " + " = ");
+			Console.WriteLine(sayilar[sayi1] + " karakök " + " = ");
 			Console.WriteLine(i + " saniyen var !");
 			kullaniciCevabı = Console.ReadLine();
 			if (kullaniciCevabı == dogruCevap.ToString())
@@ -105,8 +104,8 @@ public static class Program
 			// çıkarma sorusu
 			Console.WriteLine("Seviye: " + seviye);
 			Console.WriteLine("Puanınız: " + puan);
-			sayi1 = new Random().Next(11, 20);
-			sayi2 = new Random().Next(1, 10);
+			sayi1 = new Random().Next(20, 50);
+			sayi2 = new Random().Next(1, 20);
 			dogruCevap = sayi1 - sayi2;
 			Console.WriteLine(sayi1 + " - " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var !");
@@ -143,13 +142,9 @@ public static class Program
 			KareliSayi.Add(64);
 			KareliSayi.Add(81);
 			KareliSayi.Add(100);
-			sayi1 = new Random().Next(0, 10);
-			if (sayi1 == 0)
-			{
-				sayi1++;
-			}
+			sayi1 = new Random().Next(0, 9);			
 			dogruCevap = sayi1 * sayi1;
-			Console.WriteLine(sayi1 + " karesi" + " = ");
+			Console.WriteLine(sayi1 + " karesi" + " =");
 			Console.WriteLine(i + " saniyen var !");
 			kullaniciCevabı = Console.ReadLine();
 			if (kullaniciCevabı == dogruCevap.ToString())
@@ -179,7 +174,7 @@ public static class Program
 			küplüSayi.Add(125);//5
 			küplüSayi.Add(216);//6
 			küplüSayi.Add(343);//7
-			sayi1 = new Random().Next(1, 8);
+			sayi1 = new Random().Next(1, 6);
 			dogruCevap = sayi1 * sayi1 * sayi1;
 			Console.WriteLine(sayi1 + " küpü" + " = ");
 			Console.WriteLine(i + " saniyen var !");
@@ -203,14 +198,13 @@ public static class Program
 			Console.WriteLine("Seviye: " + seviye);
 			Console.WriteLine("Puanınız: " + puan);
 			sayi1 = new Random().Next(0, 7); // alttaki sayi
-	    	sayi2 = new Random().Next(0, 5); // üstteki sayı	    	
+			sayi2 = new Random().Next(0, 5); // üstteki sayı
 			Console.WriteLine(sayi1 + " üstü " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var !");
-			int sayi3 = new Random().Next(0, 10);
 			if (sayi1 == 0 & sayi2 == 0)
 			{
-				Console.WriteLine("cevap belirsiz devam etmek icin " + sayi3 + " yaz");
-				dogruCevap = sayi3;				
+				Console.WriteLine("cevap belirsiz devam etmek icin 15 yaz");
+				Thread.Sleep(5000);
 			}
 			kullaniciCevabı = Console.ReadLine();									
 			if (sayi2 == 1)
@@ -239,7 +233,7 @@ public static class Program
 			{
 				dogruCevap = 1;
 			}
-			if (kullaniciCevabı != dogruCevap)
+			else
 			{
 				Console.WriteLine("Yanlış cevap! Doğru cevap: " + dogruCevap);
 				break;
@@ -249,6 +243,6 @@ public static class Program
 				Console.WriteLine("oyun bitti tebrikler!");
 				break;
 			}	  	 		
-	   }		
+	   }
    }
 }
