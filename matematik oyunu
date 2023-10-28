@@ -1,29 +1,24 @@
 using System;
-
 using System.Linq;
-
 using System.Collections.Generic;
 using System.Diagnostics;
-
+using Mat_oyunu_best_version;
 
 namespace Mat_oyunu_best_version;
 
-
-
 public static class Program
-
 {
-   public static void Main()		
-   {		   	   	  
-	 	int i = 5;
-	 	int puan = 0;	 	
-		 int seviye = 1;
-		 Stopwatch stopwatch = new Stopwatch();
-         stopwatch.Start();
-   	while (true)
-	   {		    		   	
-	    	stopwatch.Start();
-			Console.Clear();			
+	public static void Main()
+	{
+		int i = 8;
+		int puan = 0;
+		int seviye = 1;
+		Stopwatch stopwatch = new Stopwatch();
+		stopwatch.Start();
+		while (true)
+		{
+			stopwatch.Start();
+			Console.Clear();
 			Program.kapali();
 			Console.WriteLine("Seviye: " + seviye);
 			Console.WriteLine("Puanınız: " + puan);
@@ -32,14 +27,14 @@ public static class Program
 			int dogruCevap = sayi1 + sayi2;
 			Console.WriteLine(sayi1 + " + " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var");
-			string kullaniciCevabı = Console.ReadLine();			
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			string kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -53,7 +48,7 @@ public static class Program
 			{
 				Console.WriteLine("oyun bitti tebrikler!");
 				break;
-			}			
+			}
 			stopwatch.Reset();
 			stopwatch.Start();
 			// Çarpma sorusu
@@ -66,13 +61,13 @@ public static class Program
 			Console.WriteLine(sayi1 + " * " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var");
 			kullaniciCevabı = Console.ReadLine();
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -109,13 +104,13 @@ public static class Program
 			Console.WriteLine(sayilar[sayi1] + " karakök " + " = ");
 			Console.WriteLine(i + " saniyen var");
 			kullaniciCevabı = Console.ReadLine();
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -142,14 +137,14 @@ public static class Program
 			Console.WriteLine(sayi1 + " - " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var");
 			kullaniciCevabı = Console.ReadLine();
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -169,19 +164,19 @@ public static class Program
 			// kareli sayılar				           
 			Program.degisik();
 			Console.WriteLine("Seviye: " + seviye);
-			Console.WriteLine("Puanınız: " + puan);			
-			sayi1 = new Random().Next(0, 9);			
+			Console.WriteLine("Puanınız: " + puan);
+			sayi1 = new Random().Next(0, 9);
 			dogruCevap = sayi1 * sayi1;
 			Console.WriteLine(sayi1 + " karesi" + " =");
 			Console.WriteLine(i + " saniyen var");
 			kullaniciCevabı = Console.ReadLine();
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -202,19 +197,19 @@ public static class Program
 			Program.sari();
 			Console.WriteLine("Seviye: " + seviye);
 			Console.WriteLine("Puanınız: " + puan);
-			List<int> küplüSayi = new List<int>();			
+			List<int> küplüSayi = new List<int>();
 			sayi1 = new Random().Next(1, 6);
 			dogruCevap = sayi1 * sayi1 * sayi1;
 			Console.WriteLine(sayi1 + " küpü" + " = ");
 			Console.WriteLine(i + " saniyen var");
 			kullaniciCevabı = Console.ReadLine();
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -239,13 +234,13 @@ public static class Program
 			sayi2 = new Random().Next(0, 5); // üstteki sayı
 			Console.WriteLine(sayi1 + " üstü " + sayi2 + " = ");
 			Console.WriteLine(i + " saniyen var");
-			kullaniciCevabı = Console.ReadLine();		
 			if (sayi1 == 0 && sayi2 == 0)
 			{
 				Console.WriteLine("cevap belirsiz devam etmek icin 15 yaz");
 				dogruCevap = 15;
-			}												
-			else if (sayi2 == 1)
+			}
+			kullaniciCevabı = Console.ReadLine();						
+			if (sayi2 == 1)
 			{
 				dogruCevap = sayi1;
 			}
@@ -260,22 +255,22 @@ public static class Program
 			else if (sayi2 == 4)
 			{
 				dogruCevap = sayi1 * sayi1 * sayi1 * sayi1;
-			}						
+			}
 			else if (sayi2 == 0)
 			{
 				dogruCevap = 1;
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
 			}
-			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
-			}			
+			}
 			if (kullaniciCevabı != dogruCevap.ToString())
 			{
 				Console.WriteLine("Yanlış cevap! Doğru cevap: " + dogruCevap);
@@ -285,53 +280,57 @@ public static class Program
 			{
 				Console.WriteLine("oyun bitti tebrikler!");
 				break;
-			}	  	 			
-		    stopwatch.Reset();
-		    stopwatch.Start();
-		    //mantik sorulari
-		    Program.kapali2();
-		    Console.WriteLine("Seviye: " + seviye);
-		    Console.WriteLine("Puanınız: " + puan);			
-			sayi1 = new Random().Next(0,2);
-			int p = new Random().Next(0,2);
-			int q = new Random().Next(0,2);
-            if (sayi1 == 0)
-            {
-               Console.WriteLine(p + " ∧  " + q + " ="); // ∧  ve baglaci ikisinin ayni olmasi disinda 0 dır               
-            }
-            if (sayi1 == 1)
-            {
-               Console.WriteLine(p + " ∨ " + q + " ="); // ∨  veya baglaci ikisinin ayni olmasi disinda 0 dır             
-            }			
-            Console.WriteLine(i + " saniyen var");
-			if (sayi1 == 0 && q == 1 && p == 1)
+			}
+			stopwatch.Reset();
+			stopwatch.Start();
+			//ve veya sorulari
+			Program.kapali2();
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+			int s = new Random().Next(0, 2);
+			int p = new Random().Next(0, 2);
+			int q = new Random().Next(0, 2);
+			if (s == 0)
+			{
+				Console.WriteLine(p + " ∧  " + q + " ="); // ∧  ve baglaci ikisinin 1 olmasi disinda 0 dır               
+			}
+			else if (s == 1)
+			{
+				Console.WriteLine(p + " ∨ " + q + " ="); // ∨  veya baglacinda ikisininde 0 olmasi disinda 1 dir           
+			}
+			Console.WriteLine(i + " saniyen var");
+			if (s == 0 && q == 1 && p == 1)
 			{
 				dogruCevap = 1;
 			}
-            else
-            {
-                dogruCevap = 0;
-            }			
-			if (sayi1 == 1 && q == 1)
-			{
-				dogruCevap = 1;
-			}
-			else if (sayi1 == 1 && q == 1)
+			else
 			{
 				dogruCevap = 0;
 			}
-            else
-            {
-                dogruCevap = 0;
-            }
-            kullaniciCevabı = Console.ReadLine();            						
-            if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 5000)
+			if (s == 1 && q == 1 && p == 1)
+			{
+				dogruCevap = 1;
+			}
+			else if (s == 1 && q == 1 && p == 0)
+			{
+				dogruCevap = 1;
+			}
+			else if (s == 1 && q == 0 && p == 1)
+			{
+				dogruCevap = 1;
+			}
+			else
+			{
+				dogruCevap = 0;
+			}
+			kullaniciCevabı = Console.ReadLine();          
+            if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
 			{
 				puan++;
 				seviye++;
 				Console.WriteLine("Doğru cevap Puan: " + puan);
 			}
-			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 5000)
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
 			{
 				Console.WriteLine("süre doldu! ,kaybettin");
 				break;
@@ -345,40 +344,142 @@ public static class Program
 			{
 				Console.WriteLine("oyun bitti tebrikler!");
 				break;
-			}			
+			}
+			// bolme soru
 			stopwatch.Reset();
-	   }	   
-   }  
-   public static void kapali()
-   {
-   	Console.ForegroundColor = ConsoleColor.DarkRed;
-   }
-   public static void kapali2()
-   {
-   	Console.ForegroundColor = ConsoleColor.DarkBlue;
-   }
-   public static void mavi()
-   {
-   	Console.ForegroundColor = ConsoleColor.Cyan;
-   }
-   public static void sari()
-   {
-   	Console.ForegroundColor = ConsoleColor.Yellow;
-   }
-   public static void yesil()
-   {
-   	Console.ForegroundColor = ConsoleColor.Green;
-   }
-   public static void kirmizi()
-   {
-   	Console.ForegroundColor = ConsoleColor.Red;
-   }  
-   public static void degisik()
-   {
-   	Console.ForegroundColor = ConsoleColor.Magenta;
-   }
-   public static void gri()
-   {
-   	Console.ForegroundColor = ConsoleColor.Gray;
-   }
+			stopwatch.Start();
+			Program.kapali3();
+			int bolen = new Random().Next(2, 8);
+			int bolensecen = new Random().Next(0, 5);		 
+			List<int> boluiki = new List<int>();
+			boluiki.Add(4);			
+			boluiki.Add(32);
+			boluiki.Add(128);
+			boluiki.Add(256);
+			boluiki.Add(2048);
+			List<int> boluuc = new List<int>();
+			boluuc.Add(3);
+			boluuc.Add(9);
+			boluuc.Add(27);
+			boluuc.Add(81);
+			boluuc.Add(243);
+			List<int> boludort = new List<int>();
+			boludort.Add(4);
+			boludort.Add(16);
+			boludort.Add(40);
+			boludort.Add(64);
+			boludort.Add(256);			
+			List<int> bolubes = new List<int>();
+			bolubes.Add(5);
+			bolubes.Add(25);
+			bolubes.Add(125);
+			bolubes.Add(625);
+			bolubes.Add(50);
+			List<int> bolualti = new List<int>();
+			bolualti.Add(6);
+			bolualti.Add(36);
+			bolualti.Add(60);
+			bolualti.Add(600);
+			bolualti.Add(30);
+			List<int> boluyedi = new List<int>();
+			boluyedi.Add(7);
+			boluyedi.Add(14);
+			boluyedi.Add(21);
+			boluyedi.Add(28);
+			boluyedi.Add(49);
+			Console.WriteLine("Seviye: " + seviye);
+			Console.WriteLine("Puanınız: " + puan);
+            if (bolen == 2)
+            {
+                dogruCevap = boluiki[bolensecen] / 2;
+				Console.WriteLine(bolen + " ÷ " + boluiki[bolensecen]); // soru
+            }
+			if (bolen == 3)
+            {
+                dogruCevap = boluuc[bolensecen] / 3;
+				Console.WriteLine(bolen + " ÷ " + boluuc[bolensecen]);
+            }
+			if (bolen == 4)
+            {
+                dogruCevap = boludort[bolensecen] / 4;
+				Console.WriteLine(boludort[bolensecen] + " ÷ " + bolen);
+            }
+			if (bolen == 5)
+            {
+                dogruCevap = bolubes[bolensecen] / 5;
+				Console.WriteLine(bolubes[bolensecen] + " ÷ " + bolen);
+            }
+			if (bolen == 6)
+            {
+                dogruCevap = bolualti[bolensecen] / 6;
+				Console.WriteLine(bolualti[bolensecen] + " ÷ " + bolen);
+            }
+			if (bolen == 7)
+            {
+                dogruCevap = boluyedi[bolensecen] / 7;
+				Console.WriteLine(boluyedi[bolensecen] + " ÷ " + bolen);
+            }				           
+			Console.WriteLine(i + " saniyen var");
+			kullaniciCevabı = Console.ReadLine();
+			if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds <= 8000)
+			{
+				puan++;
+				seviye++;
+				Console.WriteLine("Doğru cevap Puan: " + puan);
+			}
+			else if (kullaniciCevabı == dogruCevap.ToString() && stopwatch.ElapsedMilliseconds >= 8000)
+			{
+				Console.WriteLine("süre doldu! ,kaybettin");
+				break;
+			}
+			else
+			{
+				Console.WriteLine("Yanlış cevap Doğru cevap: " + dogruCevap);
+				break;
+			}
+			if (puan >= 16)
+			{
+				Console.WriteLine("oyun bitti tebrikler!");
+				break;
+			}
+			stopwatch.Stop();
+			stopwatch.Reset();
+		}
+	}
+	public static void kapali()
+	{
+		Console.ForegroundColor = ConsoleColor.DarkRed;
+	}
+	public static void kapali2()
+	{
+		Console.ForegroundColor = ConsoleColor.DarkBlue;
+	}
+		public static void kapali3()
+	{
+		Console.ForegroundColor = ConsoleColor.DarkCyan;
+	}
+	public static void mavi()
+	{
+		Console.ForegroundColor = ConsoleColor.Cyan;
+	}
+	public static void sari()
+	{
+		Console.ForegroundColor = ConsoleColor.Yellow;
+	}
+	public static void yesil()
+	{
+		Console.ForegroundColor = ConsoleColor.Green;
+	}
+	public static void kirmizi()
+	{
+		Console.ForegroundColor = ConsoleColor.Red;
+	}
+	public static void degisik()
+	{
+		Console.ForegroundColor = ConsoleColor.Magenta;
+	}
+	public static void gri()
+	{
+		Console.ForegroundColor = ConsoleColor.Gray;
+	}
 }
